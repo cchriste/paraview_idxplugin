@@ -1,0 +1,64 @@
+<ServerManagerConfiguration>
+  <ProxyGroup name="sources">
+    <!-- ================================================================== -->
+    <SourceProxy name="IDXReader" class="IDXReader" label="IDXReader">
+      <Documentation
+         long_help="Read a .idx file."
+         short_help="Read a .idx file.">
+      </Documentation>
+
+      <StringVectorProperty
+            name="FileNameOrUrl"
+            animateable="0"
+            command="SetFileName"
+            number_of_elements="1">
+        <FileListDomain name="files"/>
+        <Documentation>
+          This property specifies the file name for the IDX reader.
+        </Documentation>
+      </StringVectorProperty>
+
+      <IntVectorProperty
+            name="MultiResolution"
+	          animateable="0"
+            command="SetPercentToRemove"
+	          number_of_elements="1"
+	          default_values="4">
+         <IntRangeDomain name="range" min="0" max="6" />
+         <Documentation>
+            This property specifies the range for multi-res.
+          </Documentation>
+     </IntVectorProperty>
+
+
+      <IntVectorProperty
+                        name="TransformMode"
+                        command="SetTransformMode"
+                        number_of_elements="1"
+                        default_values="1">
+        <EnumerationDomain name="enum">
+          <Entry value="6" text="RigidBody"/>
+          <Entry value="7" text="Similarity"/>
+          <Entry value="12" text="Affine"/>
+        </EnumerationDomain>
+        <Documentation>
+          This property indicates which transform mode will be used.
+        </Documentation>
+      </IntVectorProperty>
+
+      <Hints>
+        <ReaderFactory extensions="idx"
+                       file_description="Example File Format" />
+      </Hints>
+
+    
+
+     
+
+    </SourceProxy>
+    <!-- End Reader -->
+  </ProxyGroup>
+  
+  <!-- End Filters Group -->
+  
+</ServerManagerConfiguration>

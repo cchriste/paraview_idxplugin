@@ -1,0 +1,5 @@
+<ParaViewReaders>
+  <Reader name="IDXReader" extensions="idx"
+	  file_description="IDX (.idx) Files">
+  </Reader>
+</ParaViewReaders>

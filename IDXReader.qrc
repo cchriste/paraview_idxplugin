@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="/IDXReader/ParaViewResources">
+    <file alias="IDXReaderGUI.xml">IDXReaderGUI.xml</file>
+  </qresource>
+</RCC>
